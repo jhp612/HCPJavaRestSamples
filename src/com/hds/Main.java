@@ -32,15 +32,15 @@ public class Main {
             //Create an instance of an HTTPClient
             HttpClient client = HttpClientBuilder.create().build();
             put(client, auth);
-//            putWithIndexAndShreddingEnabled(); //Set Index and Shredding to TRUE
-//            post(); //Set Hold to true
-//            get();  //Download file
-//            getDirList(); //List a directory
-//            getStats(); //Get HCP stats
-//            head(); //Execute a HEAD operation
-//            addMetaData(); // Add my-annotation
-//            getMetaData(); //Get my-annotation
-//            delete(); //Delete object -> will not work if HOLD was set to true (forbidden)
+//            putWithIndexAndShreddingEnabled(client, auth); //Set Index and Shredding to TRUE
+//            post(client, auth); //Set Hold to true
+//            get(client, auth);  //Download file
+//            getDirList(client, auth); //List a directory
+//            getStats(client, auth); //Get HCP stats
+//            head(client, auth); //Execute a HEAD operation
+//            addMetaData(client, auth); // Add my-annotation
+//            getMetaData(client, auth); //Get my-annotation
+//            delete(client, auth); //Delete object -> will not work if HOLD was set to true (forbidden)
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -389,5 +389,6 @@ public class Main {
         System.out.println("Response Code : "
                 + response.getStatusLine().getStatusCode() + " " + response.getStatusLine().getReasonPhrase());
     }
+    
 
 }
